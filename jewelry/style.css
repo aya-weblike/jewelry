@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+/*-------------------------------------------
+変数管理
+-------------------------------------------*/
+:root{
+    --font-color:#2d2d2d;
+	--font-size-title: 1.25rem;
+}
+
+/*-------------------------------------------
+共通部分
+-------------------------------------------*/
+html{
+    font-size: 100%;    
+}
+
+body{
+	color: var(--font-color);
+	font-family: "Crimson Text",serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+img{
+    vertical-align: bottom;
+	width: 100%;
+}
+
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+.mv img{
+	height: 50vh;
+	object-fit: cover;
+}
+
+.wrap{
+	margin-top: 1rem;
+	padding: 0 1.125rem;
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	width: 7rem;
+}
+
+.header-nav {
+	font-size: 0.9rem;
+	display: flex;
+	align-items: center;
+}
+
+.header-nav a{
+	margin-left: 2rem;
+	display: block;
+}
+
+/*-------------------------------------------
+メイン
+-------------------------------------------*/
+.main{
+	margin-top: 3rem;
+}
+
+.content-wrap {
+	padding: 0 1.125rem;
+
+}
+
+.content-title {
+	margin-top: 1rem;
+	font-size: var(--font-size-title);
+}
+
+.content-en-title {
+	margin-top: 0.5rem;
+}
+
+.content-desc {
+	margin-top: 1.25rem;
+	line-height: 1.7;
+}
+
+.work{
+	margin-top: 2.8rem;
+}
+
+/*-------------------------------------------
+フッター
+-------------------------------------------*/
+.footer-wrap{
+	margin-top: 4.375rem;
+	margin-bottom: 1.875rem;
+	padding: 0 1.125rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/*-------------------------------------------
+レスポンシブ
+-------------------------------------------*/
+
+@media (min-width: 767px) {
+    /* 767px以上に適用されるCSS（デスクトップ用） */
+
+	/* HEADER */
+	.header{
+		margin-inline: auto;
+		width: 90vw;
+	}
+
+	.mv img{
+		margin-top: 3.75rem;
+		height: auto;
+	}
+
+	.wrap{
+		margin-top: 2rem;
+		padding: 0;
+	}
+	
+	/* MAIN */
+	/* FOOTER */
+	.main,
+	.footer-wrap{
+		margin-inline: auto;
+		max-width: 1000px;
+	}
+
+	.content-wrap{
+		display: flex;
+		align-items: center;	
+	}
+
+	.content-img,
+	.content-info{
+		width: 50%;
+	}
+
+	.content-info{
+		padding: 0 7%;
+	}
+
+	.content-title{
+		font-size: 1.5rem;
+	}
+
+	.work {
+		flex-direction: row-reverse;
+	}
+}
